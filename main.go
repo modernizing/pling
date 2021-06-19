@@ -21,7 +21,7 @@ func (this *TreeShapeListener) EnterEveryRule(ctx antlr.ParserRuleContext) {
 func main() {
 	input := antlr.NewInputStream("create database hello")
 	lexer := parser.NewPlSqlLexer(input)
-	stream := antlr.NewCommonTokenStream(lexer,0)
+	stream := antlr.NewCommonTokenStream(lexer, antlr.TokenDefaultChannel)
 	p := parser.NewPlSqlParser(stream)
 	fmt.Println(p)
 	//p.AddErrorListener(antlr.NewDiagnosticErrorListener(true))
