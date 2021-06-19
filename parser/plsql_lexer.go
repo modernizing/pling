@@ -18117,7 +18117,7 @@ func (l *PlSqlLexer) Sempred(localctx antlr.RuleContext, ruleIndex, predIndex in
 func (p *PlSqlLexer) REMARK_COMMENT_Sempred(localctx antlr.RuleContext, predIndex int) bool {
 	switch predIndex {
 	case 0:
-		return IsNewlineAtPos(-4)
+		return p.IsNewlineAtPos(-4)
 
 	default:
 		panic("No predicate with index: " + fmt.Sprint(predIndex))
@@ -18127,7 +18127,7 @@ func (p *PlSqlLexer) REMARK_COMMENT_Sempred(localctx antlr.RuleContext, predInde
 func (p *PlSqlLexer) PROMPT_MESSAGE_Sempred(localctx antlr.RuleContext, predIndex int) bool {
 	switch predIndex {
 	case 1:
-		return IsNewlineAtPos(-4)
+		return p.IsNewlineAtPos(-4)
 
 	default:
 		panic("No predicate with index: " + fmt.Sprint(predIndex))
@@ -18137,7 +18137,7 @@ func (p *PlSqlLexer) PROMPT_MESSAGE_Sempred(localctx antlr.RuleContext, predInde
 func (p *PlSqlLexer) START_CMD_Sempred(localctx antlr.RuleContext, predIndex int) bool {
 	switch predIndex {
 	case 2:
-		return IsNewlineAtPos(-2)
+		return p.IsNewlineAtPos(-2)
 
 	default:
 		panic("No predicate with index: " + fmt.Sprint(predIndex))
