@@ -1,10 +1,9 @@
 package main
 
 import (
-	"github.com/antlr/antlr4/runtime/Go/antlr"
-	"os"
 	"fmt"
-	parser "github.com/inherd/pling/parser"
+	"github.com/antlr/antlr4/runtime/Go/antlr"
+	"github.com/inherd/pling/parser"
 )
 
 type TreeShapeListener struct {
@@ -20,7 +19,7 @@ func (this *TreeShapeListener) EnterEveryRule(ctx antlr.ParserRuleContext) {
 }
 
 func main() {
-	input, _ := antlr.NewFileStream(os.Args[1])
+	input := antlr.NewInputStream("create database hello")
 	lexer := parser.NewPlSqlLexer(input)
 	stream := antlr.NewCommonTokenStream(lexer,0)
 	p := parser.NewPlSqlParser(stream)
