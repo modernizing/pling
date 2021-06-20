@@ -15807,7 +15807,7 @@ var lexerRuleNames = []string{
 }
 
 type PlSqlLexer struct {
-	*PlSqlLexerBase
+	PlSqlLexerBase
 	channelNames []string
 	modeNames    []string
 	// TODO: EOF string

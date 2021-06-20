@@ -2,6 +2,25 @@
 
 > build domain model from PL/SQL file.
 
+## Dev
+
+1. compile antlr
+
+```
+./script/compile-antlr.sh
+```
+
+2. fix generate code typo
+
+```golang
+type PlSqlLexer struct {
+	*PlSqlLexerBase  // change to PlSqlLexerBase
+	channelNames []string
+	modeNames    []string
+	// TODO: EOF string
+}
+```
+
 License
 ---
 
