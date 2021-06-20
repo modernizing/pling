@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"github.com/antlr/antlr4/runtime/Go/antlr"
 	"github.com/inherd/pling/parser"
 	"strings"
@@ -12,6 +13,10 @@ type TreeShapeListener struct {
 
 func NewTreeShapeListener() *TreeShapeListener {
 	return new(TreeShapeListener)
+}
+
+func (s *TreeShapeListener) EnterCreate_table(ctx *parser.Create_tableContext) {
+	fmt.Println(ctx.GetText())
 }
 
 func (this *TreeShapeListener) EnterEveryRule(ctx antlr.ParserRuleContext) {
