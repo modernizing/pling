@@ -24,6 +24,14 @@ func main() {
      empID NUMBER,
      salary NUMBER(6) ENCRYPT
 );`
+	//
+	//CharStream s = CharStreams.fromPath(Paths.get('test.sql'));
+	//CaseChangingCharStream upper = new CaseChangingCharStream(s, true);
+	//Lexer lexer = new SomeSQLLexer(upper);
+	//
+	//char := new(antlr.CharStream)
+	//changingStream := NewCaseChangingStream(*char, true)
+
 	input := antlr.NewInputStream(data)
 	lexer := parser.NewPlSqlLexer(input)
 	stream := antlr.NewCommonTokenStream(lexer, antlr.TokenDefaultChannel)
