@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/antlr/antlr4/runtime/Go/antlr"
 	"github.com/inherd/pling/parser"
+	"strings"
 )
 
 type TreeShapeListener struct {
@@ -29,10 +30,11 @@ func main() {
 	//CaseChangingCharStream upper = new CaseChangingCharStream(s, true);
 	//Lexer lexer = new SomeSQLLexer(upper);
 	//
+
 	//char := new(antlr.CharStream)
 	//changingStream := NewCaseChangingStream(*char, true)
 
-	input := antlr.NewInputStream(data)
+	input := antlr.NewInputStream(strings.ToUpper(data))
 	lexer := parser.NewPlSqlLexer(input)
 	stream := antlr.NewCommonTokenStream(lexer, antlr.TokenDefaultChannel)
 	p := parser.NewPlSqlParser(stream)
