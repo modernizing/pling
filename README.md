@@ -2,6 +2,13 @@
 
 > build domain model from PL/SQL file.
 
+## TODO
+
+ - [x] import parser & grammar
+ - [ ] analyse
+    - [ ] create table
+    - [ ] create index
+
 ## Dev
 
 1. compile antlr
