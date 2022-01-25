@@ -31,5 +31,5 @@ type PlSqlLexer struct {
 License
 ---
 
-@ 2021 A [Phodal Huang](https://www.phodal.com)'s [Idea](http://github.com/phodal/ideas).  This code is distributed under the MPL license. See `LICENSE` in this directory.
+This code is distributed under the MPL license. See `LICENSE` in this directory.
 
